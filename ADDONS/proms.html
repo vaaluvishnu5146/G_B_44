@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manupulation</title>
+  </head>
+  <body>
+    <div id="content-wrapper"></div>
+    <div id="button-wrapper">
+      <!-- <select onchange="handleChange(this);">
+        <option>One</option>
+        <option>Two</option>
+      </select> -->
+    </div>
+    <script>
+      //   const heading = document.createElement("h1");
+      //   heading.innerText = "Dom Begginer";
+      //   heading.setAttribute("id", "namaste");
+      //   document.body.append(heading);
+
+      //   // FUNCTION TO CREATE ELEMENT PROGRAMATICALLY
+      //   function createDesiredElement(tag, message, id) {
+      //     const element = document.createElement(tag);
+      //     element.setAttribute("id", id);
+      //     element.innerText = message;
+
+      //     return element;
+      //   }
+
+      //   const p1 = createDesiredElement("p", "Welcome to course", "sub-heading");
+      //   const p2 = createDesiredElement("p", "Language is tamil", "description");
+
+      //   const contentWrapper = document.getElementById("content-wrapper");
+      //   contentWrapper.append(p1, p2);
+
+      //   const b1 = createDesiredElement("button", "Submit 1", "b1");
+      //   const b2 = createDesiredElement("button", "Submit 2", "b2");
+
+      //   const buttonWrapper = document.getElementById("button-wrapper");
+      //   buttonWrapper.insertAdjacentElement("afterend", b1);
+
+      // FUNCTION FOR CHANGING TEXT OF ANY ELEMENT
+      //   function changeElementText(message, id) {
+      //     const element = document.getElementById(id);
+      //     element.innerText = message;
+      //   }
+
+      // FUNCTION FOR GET LEMENT BY QUERYSELECTOR
+      // QUERYSELECTORALL
+      //   function queryAllTheElement(tag, message) {
+      //     // PASSING TAG NMAE ( p, h1, h2, h3, input ) to selector all the items matching the condition
+      //     const elements = document.querySelectorAll(tag);
+      //     console.log(elements);
+      //   }
+
+      // QUERYSELECTOR
+      //   function queryTheElement(tag, message) {
+      //     // PASSING TAG NMAE ( p, h1, h2, h3, input ) to selector all the items matching the condition
+      //     const elements = document.querySelector(tag);
+      //     console.log(elements);
+      //   }
+
+      // SET TIMOUT IS AN WEB API - C++
+      // const t1 = setTimeout(() => {
+      //     changeElementText(
+      //       "A very basic begginer course in tamil",
+      //       "welcome_message"
+      //     );
+      //     changeElementText("Namaste all!!", "namaste");
+      //   }, 2000);
+
+      // SET TIMEOUT IS AN WEB API - C++
+      //   const t2 = setTimeout(() => {
+      //     queryTheElement("p", "A very basic begginer course in tamil");
+      //     queryTheElement("h1", "Namaste all!!");
+      //   }, 2000);
+
+      // HOW INNERHTML WORKS
+      //   const contentWrapper = document.getElementById("content-wrapper");
+      //   contentWrapper.innerHTML = `<div id="dumy"><button onclick="alert('Button clicked')">submit</button></div>`;
+      //   const options = ["Male", "Female", "Do not want to disclose"];
+      //   const genderSelect = document.createElement("select");
+      //   options.forEach((element) => {
+      //     const option = document.createElement("option");
+      //     option.innerText = element;
+      //     genderSelect.append(option);
+      //   });
+      //   // genderSelect.setAttribute("onchange", "handleChange(this)");
+      //   genderSelect.addEventListener("click", handleChange);
+      //   const contentWrapper = document.getElementById("content-wrapper");
+      //   contentWrapper.append(genderSelect);
+      //   function handleChange(e) {
+      //     console.log(e);
+      //   }
+
+      //   for(let i = 0; i < 10; i = i + 2) {
+
+      //   }
+      //   const textArr = ["hey", "how", "are", "you", "all"];
+      //   // WE STORE ALL NEWLY CREATED NODES HERE
+      //   const nodes = [];
+      //   textArr.forEach((element) => {
+      //     const p = document.createElement("p");
+      //     p.innerText = element;
+      //     nodes.push(p);
+      //   });
+
+      //     (element, index) => {
+      //       const p = document.createElement("p");
+      //       p.innerText = element;
+      //       return p;
+      //     }
+      //   );
+      //   const contentWrapper = document.getElementById("content-wrapper");
+      //   contentWrapper.append(...nodes);
+      //   console.log(nodes);
+
+      fetch(
+        "https://63a3c5a7471b38b20615a032.mockapi.io/api/teacher/Studentapi"
+      )
+        .then((result) => result.json())
+        .then((data) => console.log(data))
+        .catch((error) => console.log(error));
+    </script>
+  </body>
+</html>
