@@ -270,3 +270,4 @@ Use this space to list resources you find helpful and would like to give credit 
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+[Owner-picture]: https://yt3.ggpht.com/XT5H3AneDF9OX3p9qOcXQ6H5yohPJ88R-cRg2OJqSQ70ham4hWTq9g1OnTVDocu2NtHnlBC_NXs=s600-c-k-c0x00ffffff-no-rj-rp-mo
