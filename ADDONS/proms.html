@@ -117,11 +117,15 @@
       //   contentWrapper.append(...nodes);
       //   console.log(nodes);
 
+      function printData(data = []) {
+        data.map((element, index) => console.log(element));
+      }
+
       fetch(
         "https://63a3c5a7471b38b20615a032.mockapi.io/api/teacher/Studentapi"
       )
         .then((result) => result.json())
-        .then((data) => console.log(data))
+        .then((data) => printData(data))
         .catch((error) => console.log(error));
     </script>
   </body>
