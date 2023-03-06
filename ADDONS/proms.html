@@ -116,16 +116,18 @@
       //   const contentWrapper = document.getElementById("content-wrapper");
       //   contentWrapper.append(...nodes);
       //   console.log(nodes);
-
-      function printData(data = []) {
-        data.map((element, index) => console.log(element));
+      var studentsData = [];
+      function printData(data = {}) {
+        console.log(data.education);
+        // data.map((element, index) => console.log(element));
       }
 
-      fetch(
-        "https://63a3c5a7471b38b20615a032.mockapi.io/api/teacher/Studentapi"
-      )
+      fetch("./data.json")
         .then((result) => result.json())
-        .then((data) => printData(data))
+        .then((result) => {
+          studentsData = result;
+          printData(result.data);
+        })
         .catch((error) => console.log(error));
     </script>
   </body>
