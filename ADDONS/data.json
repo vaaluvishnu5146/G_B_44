@@ -1,0 +1,32 @@
+{
+  "message": "Data fetched successfully",
+  "status": 200,
+  "data": {
+    "name": "Ajith",
+    "age": "20",
+    "skills": ["Drawing", "Painting", "Singing"],
+    "address": {
+      "line1": "",
+      "line2": ""
+    },
+    "education": [
+      {
+        "education": "Bachelors",
+        "duration": 3
+      },
+      {
+        "education": "High School",
+        "duration": 4
+      },
+      {
+        "education": "Master",
+        "duration": 2
+      }
+    ],
+    "contactDetails": {
+      "phoneNumber": "+91890889789",
+      "telehone": "",
+      "emailId": "test@test.com"
+    }
+  }
+}

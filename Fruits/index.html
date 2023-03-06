@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://cdn-icons-png.flaticon.com/512/2843/2843568.png"
+      sizes="16x16 24x24 32x32 48x48"
+    />
+    <title>Fruits | Search</title>
+    <style>
+      .countries-container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        width: 150px;
+        min-height: 100px;
+        background: aqua;
+        border-radius: 10px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hey Fruits</h1>
+    <input id="search" onkeyup="handleSearch(this);" />
+    <div class="countries-container" id="countries-container"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
