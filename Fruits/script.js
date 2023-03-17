@@ -9,6 +9,7 @@ function handleSearch(target) {
     const name = element.name.common.toLowerCase();
     return name.includes(search);
   });
+  // CREATE AL CARDS ONECE AGAIN
   renderCards(searchMatch);
 }
 
