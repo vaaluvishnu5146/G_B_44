@@ -9,10 +9,11 @@ const { getFileName } = require("../utils/calendar");
 /**
  * GET_ALL_COUNTRIES route will fetch all the countries details from 'countries' collections
  */
-FilesRouter.post("/createFile", function (req, res, next) {
-  const notes = `./fileSystem/${getFileName(new Date())}`;
+FilesRouter.post("/createFileSynchronusly", function (req, res, next) {
+  const { message } = req.body;
+  const path = `./fileSystem/${getFileName(new Date())}`;
   try {
-    filesystem.writeFile(notes, "New File");
+    filesystem.writeFileSync(path, message || "New File");
     return res.status(200).json({
       message: "File created successfully!!!",
     });
@@ -21,6 +22,26 @@ FilesRouter.post("/createFile", function (req, res, next) {
       message: "Error creating file!!!",
     });
   }
+});
+
+/**
+ * GET_ALL_COUNTRIES route will fetch all the countries details from 'countries' collections
+ */
+FilesRouter.post("/createFile/:name", function (req, res, next) {
+  const { message } = req.body;
+  const path = `./fileSystem/${getFileName(new Date())}`;
+  filesystem.writeFile(path, message || "New File", function (err) {
+    if (err) {
+      return res.status(501).json({
+        message: "Error creating file!!!",
+      });
+    } else {
+      return res.status(200).json({
+        message: "File created successfully!!!",
+        response: "dasdsa",
+      });
+    }
+  });
 });
 
 module.exports = FilesRouter;

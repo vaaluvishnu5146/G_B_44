@@ -11,7 +11,7 @@ const PORT = 4000;
 /**
  * REGISTERING APP SERVER
  */
-NODE_SERVER.use("/", APP_SERVER);
+NODE_SERVER.use("/api/v1", APP_SERVER);
 
 try {
   NODE_SERVER.listen(PORT, "localhost", () => {
