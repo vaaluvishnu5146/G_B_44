@@ -1,6 +1,12 @@
 const express = require("express");
 const bodyparser = require("body-parser");
 const APP_SERVER = require("./app");
+const ENV = require("dotenv");
+
+/**
+ * CONFIGURING ENVIRONMENT VARIABLES
+ */
+ENV.config();
 const NODE_SERVER = express();
 
 /**
@@ -23,7 +29,8 @@ NODE_SERVER.use("/api", APP_SERVER);
  * CONFIGURE NODE SERVER
  * PORT TO ACCEPT/SEND REQUEST/RESPONSE = 5000
  */
-const PORT = 5000;
-NODE_SERVER.listen(PORT, "localhost", () => {
-  console.log("SERVER STARTED ON PORT", PORT);
+NODE_SERVER.listen(process.env.NODE_DEVELOPMENT_PORT, "localhost", () => {
+  console.log("SERVER STARTED ON PORT", process.env.NODE_DEVELOPMENT_PORT);
 });
+
+console.log(process.env);
